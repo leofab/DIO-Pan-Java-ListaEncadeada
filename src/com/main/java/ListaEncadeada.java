@@ -84,4 +84,19 @@ public class ListaEncadeada<T> {
 		}
 	}
 
+	@Override
+	public String toString() {
+		String strRetorno = "";
+		No<T> noAuxiliar = referenciaEntrada;
+		for(int i = 0; i < this.size(); i++) {
+			strRetorno += "[No {conteudo = " + noAuxiliar.getConteudo() + "}----->";
+			noAuxiliar = noAuxiliar.getProximoNo();
+		}
+		strRetorno += "null";
+		
+		return strRetorno;
+	}
+	
+	
+
 }
